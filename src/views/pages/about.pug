@@ -1,0 +1,17 @@
+extends ../index.pug
+
+block variables
+  - var template = 'about'
+
+block content
+  .about
+    .about__wrapper.smoothscroll__wrapper
+      h2.about__title(data-animation="lines")=about.data.title
+
+      article.about__article
+        h3.about__article__title(data-animation="lines") about us
+        p.about__article__text(data-animation="opacity")!=about.data.description.replace(/\n/, '<br><br>')
+
+      article.about__article
+        h3.about__article__title(data-animation="lines") mission
+        p.about__article__text(data-animation="opacity")!=about.data.description.replace(/\n/, '<br><br>')

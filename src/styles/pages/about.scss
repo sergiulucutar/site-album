@@ -1,0 +1,51 @@
+.about {
+  // @extend %page
+}
+
+.about__wrapper {
+  padding: 6rem;
+  backface-visibility: hidden;
+
+  @media only screen and (max-width: $bp__tablet) {
+    padding: 6rem 1rem;
+  }
+}
+.about__title {
+  margin: 0;
+
+  line-height: 0;
+  font-size: 12vw;
+  text-transform: uppercase;
+
+  span {
+    line-height: 1;
+  }
+}
+
+.about__article {
+  display: grid;
+  grid-template-columns: 1fr 1.618fr;
+
+  margin-top: 4rem;
+
+  @media only screen and (max-width: $bp__tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.about__article__title {
+  grid-column: 1;
+
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.about__article__text {
+  grid-column: 2;
+
+  @media only screen and (max-width: $bp__tablet) {
+    padding: 0 2rem;
+    padding-top: 1rem;
+  }
+}

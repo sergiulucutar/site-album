@@ -1,0 +1,26 @@
+extends ../index.pug
+
+block variables
+  - var template = 'story'
+
+block content
+  .story
+    .story__wrapper.smoothscroll__wrapper
+      section.story__photo
+        .story__photo__frame
+          svg(viewBox="0 0 100 160")
+            rect(x="2" y="2" width="96" height="156")
+        figure.story__photo__media
+          img.story__photo__media__image(alt=story.data.photo.alt src=story.data.photo.url crossorigin="anonymous")
+
+      section.story__content
+        .story__border
+          .story__border__wrapper
+            .story__border__line
+        header.story__header
+          h2.story__title(data-animation="lines")=story.data.title
+          .story__type(data-animation="opacity")=story.data.type
+        section.story__body(data-animation="opacity")=story.data.description
+        footer.story__footer(data-animation="opacity")=story.data.footer
+      a.story__close(href="/")
+        span.story__close__lines
